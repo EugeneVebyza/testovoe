@@ -1,0 +1,336 @@
+@font-face {
+  font-family: 'Open Sans';
+  font-style : normal;
+  font-weight: 400;
+  src        : url('/fonts/open-sans-v18-latin_cyrillic-regular.eot');
+  src        : local('Open Sans Regular'), local('OpenSans-Regular'),
+    url('/fonts/open-sans-v18-latin_cyrillic-regular.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/open-sans-v18-latin_cyrillic-regular.woff2') format('woff2'),
+    url('/fonts/open-sans-v18-latin_cyrillic-regular.woff') format('woff'),
+    url('/fonts/open-sans-v18-latin_cyrillic-regular.ttf') format('truetype'),
+    url('/fonts/open-sans-v18-latin_cyrillic-regular.svg#OpenSans') format('svg');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style : bold;
+  font-weight: 700;
+  src        : url('/fonts/open-sans-v18-latin_cyrillic-700.eot');
+  src        : local(''),
+    url('/fonts/open-sans-v18-latin_cyrillic-700.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/open-sans-v18-latin_cyrillic-700.woff2') format('woff2'),
+    url('/fonts/open-sans-v18-latin_cyrillic-700.woff') format('woff'),
+    url('/fonts/open-sans-v18-latin_cyrillic-700.ttf') format('truetype'),
+    url('/fonts/open-sans-v18-latin_cyrillic-700.svg#OpenSans') format('svg');
+}
+
+body {
+  font-family    : 'Open Sans';
+  font-style     : normal;
+  font-weight    : 400;
+  color          : #323232;
+  width          : 100vw;
+  height         : 100vh;
+  min-height     : 586px;
+  background     : center / cover url('/img/bg.jpg') no-repeat;
+  margin         : 0;
+  display        : flex;
+  align-items    : center;
+  justify-content: center;
+}
+
+.formContainer {
+  background-color: white;
+  height          : 100%;
+  min-height      : 586px;
+}
+
+.formTitle {
+  padding-top: 39px;
+  margin     : 0 0 20px 0;
+  text-align : center;
+}
+
+.formWrapper {
+  width  : 80%;
+  margin : auto;
+  padding: 0 40px 0 40px;
+}
+
+.heightContainer,
+.telContainer,
+.mailContainer {
+  margin-top: 23px;
+}
+
+.selectContainer {
+  margin-top: 14px;
+}
+
+.orderDescription {
+  margin-top: 18px;
+}
+
+.formOrderWrapper {
+  display       : flex;
+  flex-direction: column;
+  width         : 80%;
+  margin        : auto;
+  padding       : 0 40px 0 40px;
+}
+
+.inputСontainer {
+  width          : 100%;
+  display        : flex;
+  align-items    : center;
+  justify-content: space-between;
+}
+
+.selectBlock {
+  width          : 100%;
+  height         : 25px;
+  display        : flex;
+  align-items    : center;
+  justify-content: space-between;
+}
+
+.form-check {
+  margin: 18px 0px 0 -7px;
+}
+
+.checkmarkContainer {
+  height         : 50px;
+  width          : 50px;
+  display        : flex;
+  align-items    : center;
+  justify-content: space-between;
+  padding-left   : 15px;
+  visibility     : hidden;
+}
+
+.valid .checkmarkContainer {
+  visibility: visible;
+}
+
+.invalid .form-control {
+  border: 1px solid #C98E99;
+}
+
+.feedback {
+  position : absolute;
+  font-size: 13px;
+  color    : #C98E99;
+  display  : none;
+}
+
+.invalid .feedback {
+  display: block;
+}
+
+.inputGroup {
+  display    : flex;
+  align-items: center;
+  width      : 100%;
+}
+
+.supportText {
+  display  : flex;
+  width    : 50px;
+  margin   : 0px 10px 8px 15px;
+  font-size: 18px;
+}
+
+.total {
+  margin-top: 18px;
+  font-size : 24px;
+}
+
+.total>span {
+  color: #A10031;
+
+}
+
+.toolBar {
+  display        : flex;
+  justify-content: space-between;
+  margin-bottom  : 10px;
+  height         : 20px;
+  display        : flex;
+  text-decoration: underline;
+  color          : #fff;
+}
+
+.prevPage>img {
+  margin: -4px 6px 0px 0px;
+}
+
+.wrapper {
+  height    : 75.9%;
+  min-height: 400px;
+}
+
+.form-control {
+  background   : linear-gradient(180deg, #F8F8F8 0%, rgba(243, 243, 243, 0) 100%, #F2F2F2 100%);
+  border       : 1px solid #D7D7D7;
+  box-sizing   : border-box;
+  box-shadow   : inset 0px 1px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 3px;
+  height       : 50px;
+}
+
+.form-control:focus {
+  background   : linear-gradient(180deg, #F8F8F8 0%, rgba(243, 243, 243, 0) 100%, #F2F2F2 100%);
+  border       : 1px solid #4892EC;
+  box-sizing   : border-box;
+  box-shadow   : inset 0px 1px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 3px;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.lengthUnit,
+.heightUnit {
+  width: 50px;
+}
+
+.checkInput {
+  position: absolute;
+  width   : 1px;
+  height  : 1px;
+  overflow: hidden;
+  clip    : rect(0 0 0 0);
+}
+
+.checkBox {
+  position        : absolute;
+  margin-top      : 0.2em;
+  margin-left     : -22px;
+  width           : 16px;
+  height          : 16px;
+  overflow        : hidden;
+  background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0.5' y='0.5' width='15' height='15' rx='2.5' fill='url(%23paint0_linear)' stroke='%23D7D7D7'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear' x1='8.02508' y1='16' x2='8.02507' y2='-2.11297e-08' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23F3F3F3'/%3E%3Cstop offset='1' stop-color='%23F3F3F3' stop-opacity='0'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E ");
+}
+
+.checkLabel {
+  margin-top : 10px;
+  margin-left: 5px;
+}
+
+.checkInput:checked+.checkBox {
+  background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0.5' y='0.5' width='15' height='15' rx='2.5' fill='url(%23paint0_linear)' stroke='%2394BDF0'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M6.18182 10.3284L3.79545 7.8209L3 8.65672L6.18182 12L13 4.83582L12.2045 4L6.18182 10.3284Z' fill='%23323232' stroke='%23323232'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear' x1='8.02508' y1='16' x2='8.02507' y2='-2.11297e-08' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23F3F3F3'/%3E%3Cstop offset='1' stop-color='%23F3F3F3' stop-opacity='0'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A");
+}
+
+.nextBtn {
+  margin          : 11px 0 0 7px;
+  width           : 150px;
+  height          : 50px;
+  background-color: #fff;
+  color           : #fff;
+  border          : none;
+  box-shadow      : none;
+  padding         : 0px 10px 0px 0px;
+}
+
+
+.nextBtnEnable {
+  background: url("data:image/svg+xml,%3Csvg width='149' height='50' viewBox='0 0 149 50' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 0.5H120.856C121.47 0.5 122.062 0.726095 122.521 1.13516L147.161 23.1352C148.274 24.1292 148.274 25.8708 147.161 26.8648L122.521 48.8648C122.062 49.2739 121.47 49.5 120.856 49.5H6C2.96243 49.5 0.5 47.0376 0.5 44V6C0.5 2.96243 2.96243 0.5 6 0.5Z' fill='url(%23paint0_linear)' stroke='%23226DC8'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear' x1='75' y1='0' x2='75' y2='50' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%234892EC'/%3E%3Cstop offset='1' stop-color='%232F79D4'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E ") no-repeat;
+}
+
+.nextBtnDisable {
+  background: url("data:image/svg+xml,%3Csvg width='149' height='50' viewBox='0 0 149 50' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 6C0 2.68629 2.68629 0 6 0H120.856C121.593 0 122.304 0.271314 122.854 0.762187L147.494 22.7622C148.83 23.955 148.83 26.045 147.494 27.2378L122.854 49.2378C122.304 49.7287 121.593 50 120.856 50H6C2.68629 50 0 47.3137 0 44V6Z' fill='url(%23paint0_linear)'/%3E%3Cpath d='M6 0.5H120.856C121.47 0.5 122.062 0.726095 122.521 1.13516L147.161 23.1352C148.274 24.1292 148.274 25.8708 147.161 26.8648L122.521 48.8648C122.062 49.2739 121.47 49.5 120.856 49.5H6C2.96243 49.5 0.5 47.0376 0.5 44V6C0.5 2.96243 2.96243 0.5 6 0.5Z' stroke='url(%23paint1_linear)' stroke-opacity='0.8'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear' x1='75' y1='0' x2='75' y2='50' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23818387'/%3E%3Cstop offset='1' stop-color='%23696B6F'/%3E%3C/linearGradient%3E%3ClinearGradient id='paint1_linear' x1='75' y1='0' x2='75' y2='50' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%237D7F82'/%3E%3Cstop offset='1' stop-color='%235E6165'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E ") no-repeat;
+}
+
+.nextBtnEnable:focus {
+  outline   : 0px;
+  background: url("data:image/svg+xml,%3Csvg width='149' height='50' viewBox='0 0 149 50' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.5 6C0.5 2.96243 2.96243 0.5 6 0.5H120.856C121.47 0.5 122.062 0.726095 122.521 1.13516L147.161 23.1352C148.274 24.1292 148.274 25.8708 147.161 26.8648L122.521 48.8648C122.062 49.2739 121.47 49.5 120.856 49.5H6C2.96243 49.5 0.5 47.0376 0.5 44V6Z' fill='%23256FCA' stroke='%23226DC8'/%3E%3C/svg%3E ") no-repeat;
+}
+
+
+.nextBtnEnable:hover {
+  background: url("data:image/svg+xml,%3Csvg width='149' height='50' viewBox='0 0 149 50' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.5 6C0.5 2.96243 2.96243 0.5 6 0.5H120.856C121.47 0.5 122.062 0.726095 122.521 1.13516L147.161 23.1352C148.274 24.1292 148.274 25.8708 147.161 26.8648L122.521 48.8648C122.062 49.2739 121.47 49.5 120.856 49.5H6C2.96243 49.5 0.5 47.0376 0.5 44V6Z' fill='%233E8FF2' stroke='%233789EC'/%3E%3C/svg%3E ") no-repeat;
+}
+
+.sendBtnEnable,
+.sendBtnDisable,
+.sendBtnEnable:hover,
+.sendBtnEnable:focus {
+  margin       : auto;
+  width        : 230px;
+  height       : 50px;
+  color        : white;
+  background   : linear-gradient(180deg, #4892EC 0%, #2F79D4 100%);
+  border       : 1px solid #226DC8;
+  box-sizing   : border-box;
+  box-shadow   : 0px 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+}
+
+.sendBtnDisable {
+  background: linear-gradient(180deg, #818387 0%, #696B6F 100%);
+  border    : 1px solid #818387;
+}
+
+.sendBtnEnable:hover {
+  background: #3E8FF2;
+  border    : 1px solid #3789EC;
+}
+
+.sendBtnEnable:focus {
+  outline   : 0px;
+  background: #256FCA;
+  border    : 1px solid #226DC8;
+}
+
+.popUp {
+  text-align: center;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+.cutDown {
+  display: none;
+}
+
+.popUp>p {
+  font-size: 18px;
+}
+
+.popUp>h1 {
+  font-family: 'Open Sans';
+  font-style : bold;
+  font-weight: 700;
+  font-size  : 26px;
+  color      : #323232;
+}
+
+.popUp>h1>span,
+.ordererMail,
+.ordererTel {
+  color: #2F79D4;
+}
+
+.formLabel {
+  margin-bottom: 8px;
+}
+
+.materialLabel {
+  margin-bottom: 14px;
+}
+
+.formTitle {
+  margin-top: 39px;
+  text-align: center;
+}
+
+.container {
+  padding: 0;
+}

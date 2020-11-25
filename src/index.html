@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css"
+      integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>form</title>
+  </head>
+
+  <body>
+    <div class="wrapper container-sm">
+      <div class="toolBar">
+        <div class="prevPage cutDown">
+          <img src="/img/arrow.svg" alt="left arrow" /><span>Вернуться</span>
+        </div>
+        <span class="close cutDown">Закрыть</span>
+      </div>
+      <div class="formContainer">
+        <form class="formCalculator novalidate" action="#">
+          <div class="formWrapper">
+            <h1 class="formTitle">Заказать забор</h1>
+            <div class="lengthContainer container">
+              <label class="formLabel" for="">Длина забора</label>
+              <div class="inputСontainer">
+                <div class="inputGroup">
+                  <input
+                    class="form-control length req"
+                    name="length"
+                    type="number"
+                    placeholder="0"
+                  />
+                  <div class="supportText">
+                    <span id="passwordHelpInline" class="formText lengthUnit">
+                      метров
+                    </span>
+                  </div>
+                </div>
+
+                <div class="checkmarkContainer">
+                  <img src="/img/check.svg" alt="" />
+                </div>
+              </div>
+
+              <div class="feedback">
+                <span>Неверно заполнено поле</span>
+              </div>
+            </div>
+
+            <div class="heightContainer container">
+              <label class="formLabel" for="">Высота забора</label>
+              <div class="inputСontainer">
+                <div class="inputGroup">
+                  <input
+                    class="form-control height req"
+                    name="height"
+                    type="number"
+                    placeholder="0"
+                  />
+                  <div class="supportText">
+                    <span id="passwordHelpInline" class="formText heightUnit">
+                      метров
+                    </span>
+                  </div>
+                </div>
+
+                <div class="checkmarkContainer">
+                  <img src="/img/check.svg" alt="" />
+                </div>
+              </div>
+              <div class="feedback">
+                <span>Неверно заполнено поле</span>
+              </div>
+            </div>
+
+            <div class="selectContainer">
+              <label class="formLabel materialLabel" for=""
+                >Материал забора</label
+              >
+              <div class="selectBlock container">
+                <select
+                  class="form-select material req"
+                  name="material"
+                  aria-label="select example"
+                >
+                  <option value="0">Выберите материал</option>
+                  <option value="400">Профнастил 400 Р за м²</option>
+                  <option value="500">Модули 500 Р за м²</option>
+                  <option value="700">Бетон 700 Р за м²</option>
+                  <option value="200">Сетка 200 Р за м²</option>
+                </select>
+
+                <div class="checkmarkContainer">
+                  <img src="/img/check.svg" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label checkLabel" for="defaultCheck1">
+                <input
+                  class="form-check-input checkInput"
+                  type="checkbox"
+                  id="defaultCheck1"
+                  name="montage"
+                />
+                <span class="checkBox"></span>
+                Нужен монтаж
+              </label>
+            </div>
+
+            <h1 class="total">
+              Сумма заказа: <span class="totalCost">0</span
+              ><span> &#8381;</span>
+            </h1>
+
+            <button class="nextBtn nextBtnDisable" type="submit">ДАЛЕЕ</button>
+          </div>
+        </form>
+
+        <form class="formOrder novalidate cutDown" action="#">
+          <h1 class="formTitle">Пожалуйста, представьтесь</h1>
+          <div class="formOrderWrapper">
+            <div class="nameContainer container">
+              <label class="form-label" for="">Ваше имя</label>
+              <div class="inputGroup">
+                <input class="form-control nameInput req" type="text" />
+
+                <div class="checkmarkContainer">
+                  <img src="/img/check.svg" alt="" />
+                </div>
+              </div>
+              <div class="feedback">
+                <span>Неверно заполнено поле</span>
+              </div>
+            </div>
+
+            <div class="mailContainer container">
+              <label class="form-label" for="">Электронная почта</label>
+              <div class="inputGroup">
+                <input class="form-control mailInput req" type="text" />
+
+                <div class="checkmarkContainer">
+                  <img src="/img/check.svg" alt="" />
+                </div>
+              </div>
+              <div class="feedback">
+                <span>Неверно заполнено поле</span>
+              </div>
+            </div>
+
+            <div class="telContainer container">
+              <label class="form-label" for="">Телефон</label>
+              <div class="inputGroup">
+                <input
+                  class="form-control telInput req"
+                  id="tel"
+                  type="tel"
+                  placeholder="+7 (___) ___ - __ - __"
+                />
+
+                <div class="checkmarkContainer">
+                  <img src="/img/check.svg" alt="" />
+                </div>
+              </div>
+              <div class="feedback">
+                <span>Неверно заполнено поле</span>
+              </div>
+            </div>
+            <p class="orderDescription"></p>
+
+            <button class="sendBtn sendBtnDisable" type="submit">
+              ОТПРАВИТЬ
+            </button>
+          </div>
+        </form>
+        <div class="popUp cutDown">
+          <h1 class="ordererName"></h1>
+          <h1>заказ <span>№ 8675</span> сформирован!</h1>
+          <p>Мы повторили его комплектацию на почту</p>
+          <p class="ordererMail"></p>
+
+          <p>В ближайшее время наш специалист свяжется с вами по телефону</p>
+          <p class="ordererTel"></p>
+        </div>
+      </div>
+      <script
+        src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js"
+        integrity="sha384-BOsAfwzjNJHrJ8cZidOg56tcQWfp6y72vEJ8xQ9w6Quywb24iOsW913URv1IS4GD"
+        crossorigin="anonymous"
+      ></script>
+      <script src="./index.js"></script>
+    </div>
+  </body>
+</html>
